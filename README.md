@@ -1,1 +1,1 @@
-# splunk_tuned_profile
+Redhat tuned profile optimized for splunk
