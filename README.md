@@ -1,1 +1,1 @@
-Redhat tuned profile optimized for splunk
+Redhat tuned profile optimized for cribl (logstream)
