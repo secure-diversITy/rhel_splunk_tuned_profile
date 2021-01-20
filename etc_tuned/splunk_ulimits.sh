@@ -2,7 +2,6 @@
 
 . /usr/lib/tuned/functions
 SPLUNKH=/opt/splunk
-. $SPLUNKH/etc/splunk-launch.conf
 
 start() {
     su - $SPLUNK_OS_USER
@@ -28,4 +27,8 @@ stop() {
     return 0
 }
 
-process $@
+# only process the above when splunk is installed actually
+if [ -f $SPLUNKH/etc/splunk-launch.conf ];then
+    . $SPLUNKH/etc/splunk-launch.conf
+    process $@
+fi
